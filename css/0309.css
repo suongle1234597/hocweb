@@ -1,0 +1,54 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+  @media (max-width: 576px) {
+    .container {
+      max-width: 98%; } }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 98%; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 1200px; } }
+
+.content .container .red {
+  height: 100px;
+  background: rgba(255, 0, 0, 0.8);
+  width: 33.3333%; }
+  @media (max-width: 576px) {
+    .content .container .red {
+      width: 100%; } }
+  @media (min-width: 768px) {
+    .content .container .red {
+      background: green; } }
+  @media (min-width: 992px) {
+    .content .container .red {
+      background: red; }
+      .content .container .red:hover {
+        background: green; } }
+
+.content .container .blue {
+  background: rgba(0, 0, 255, 0.8);
+  height: 300px; }
+  @media (max-width: 576px) {
+    .content .container .blue {
+      background: red;
+      height: 100px; }
+      .content .container .blue:hover {
+        background: green; } }
+
+.content .container .brown {
+  display: flex;
+  flex-wrap: wrap; }
+  .content .container .brown .b-item {
+    height: 100px;
+    width: 33.3333%; }
+    @media (max-width: 576px) {
+      .content .container .brown .b-item {
+        width: 100%; } }
+    @media (min-width: 576px) {
+      .content .container .brown .b-item {
+        width: 50%; } }
+    @media (min-width: 768px) {
+      .content .container .brown .b-item {
+        width: 33.3333%; } }

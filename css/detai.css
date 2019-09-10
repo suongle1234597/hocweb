@@ -1,0 +1,396 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #363f4d; }
+
+a {
+  color: #363f4d; }
+
+.container {
+  max-width: 1400px;
+  margin: auto; }
+
+.flex {
+  display: flex; }
+
+header {
+  padding: 5px 0; }
+  header .container {
+    justify-content: space-between;
+    align-items: center; }
+
+.logo img {
+  width: 120px; }
+
+.navbar ul li {
+  margin-right: 30px; }
+  .navbar ul li a {
+    transition: all 0.5s; }
+  .navbar ul li:hover a {
+    color: #c6263d; }
+
+.function {
+  align-items: center; }
+
+.search {
+  margin-right: 30px; }
+  .search input {
+    padding: 5px 15px;
+    border-left: 0.8px solid #ccc7c7;
+    width: 250px; }
+    .search input::placeholder {
+      color: #363f4d;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      transition: all 0.5s; }
+    .search input:focus i {
+      color: #c6263d; }
+  .search i {
+    transition: all 0.5s; }
+  .search:hover input::placeholder {
+    color: rgba(54, 63, 77, 0.6); }
+  .search:hover i {
+    color: #c6263d; }
+
+.login .user {
+  position: relative; }
+  .login .user .user-dropdown {
+    position: absolute;
+    padding: 15px;
+    left: -30%;
+    z-index: 99;
+    width: 170px;
+    box-shadow: 0px 1px 4px 4px rgba(128, 128, 128, 0.4);
+    background: white;
+    display: none; }
+    .login .user .user-dropdown li a {
+      font-size: 14px; }
+    .login .user .user-dropdown li:first-child {
+      margin-bottom: 15px; }
+  .login .user:hover .user-dropdown {
+    animation: fadedropdown 0.5s forwards;
+    display: block; }
+
+.login a {
+  transition: all 0.5s; }
+  .login a.user {
+    text-decoration: underline; }
+  .login a:hover {
+    cursor: pointer;
+    color: #c6263d; }
+
+.login i {
+  margin-left: 30px; }
+
+@keyframes fadedropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 100;
+  border-bottom: 0.5px solid #eee; }
+
+.animation {
+  animation: fadeDown 0.5s forwards ease-in; }
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.modal-login {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: none;
+  z-index: 100; }
+  .modal-login .formwrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; }
+    .modal-login .formwrapper form {
+      width: 400px;
+      background: white;
+      border-radius: 10px;
+      padding: 5px 5px 20px 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 1px 1px 4px 4px rgba(128, 128, 128, 0.6); }
+      .modal-login .formwrapper form i.fa-times-circle {
+        width: 100%;
+        text-align: right;
+        font-size: 20px;
+        transition: all 0.5s; }
+        .modal-login .formwrapper form i.fa-times-circle:hover {
+          color: #c6263d; }
+      .modal-login .formwrapper form h2 {
+        color: #c6263d;
+        margin-bottom: 30px;
+        text-align: center; }
+      .modal-login .formwrapper form input::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px; }
+      .modal-login .formwrapper form .username, .modal-login .formwrapper form .password {
+        margin-bottom: 30px;
+        width: 250px;
+        height: 20px;
+        border-bottom: 0.8px solid #363f4d; }
+        .modal-login .formwrapper form .username i, .modal-login .formwrapper form .password i {
+          margin-right: 15px; }
+      .modal-login .formwrapper form .password {
+        margin-bottom: 10px; }
+      .modal-login .formwrapper form button {
+        width: 70%;
+        padding: 10px;
+        background: #c6263d;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        transition: all 0.5s;
+        margin-bottom: 15px; }
+        .modal-login .formwrapper form button:hover {
+          background: #363f4d; }
+      .modal-login .formwrapper form a.forgot {
+        width: 70%;
+        text-align: right;
+        font-size: 9px;
+        margin-bottom: 15px;
+        transition: all 0.5s;
+        color: #c6263d; }
+        .modal-login .formwrapper form a.forgot:hover {
+          font-weight: bold; }
+      .modal-login .formwrapper form p span a {
+        text-decoration: underline;
+        transition: all 0.5s; }
+        .modal-login .formwrapper form p span a:hover {
+          color: #c6263d;
+          font-weight: bold; }
+
+.modal-register {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: none;
+  z-index: 100; }
+  .modal-register .formwrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; }
+    .modal-register .formwrapper form {
+      width: 400px;
+      background: white;
+      border-radius: 10px;
+      padding: 5px 5px 20px 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 1px 1px 4px 4px rgba(128, 128, 128, 0.6); }
+      .modal-register .formwrapper form i.fa-times-circle {
+        width: 100%;
+        text-align: right;
+        font-size: 20px;
+        transition: all 0.5s; }
+        .modal-register .formwrapper form i.fa-times-circle:hover {
+          color: #c6263d; }
+      .modal-register .formwrapper form h2 {
+        color: #c6263d;
+        margin-bottom: 30px;
+        text-align: center; }
+      .modal-register .formwrapper form input::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px; }
+      .modal-register .formwrapper form .name, .modal-register .formwrapper form .birthday, .modal-register .formwrapper form .phone, .modal-register .formwrapper form .sex, .modal-register .formwrapper form .username, .modal-register .formwrapper form .password {
+        margin-bottom: 30px;
+        width: 250px;
+        height: 20px;
+        border-bottom: 0.8px solid #363f4d; }
+        .modal-register .formwrapper form .name i, .modal-register .formwrapper form .birthday i, .modal-register .formwrapper form .phone i, .modal-register .formwrapper form .sex i, .modal-register .formwrapper form .username i, .modal-register .formwrapper form .password i {
+          margin-right: 15px; }
+      .modal-register .formwrapper form .sex p optgroup option {
+        margin-right: 15px; }
+      .modal-register .formwrapper form button {
+        width: 70%;
+        padding: 10px;
+        background: #c6263d;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        transition: all 0.5s;
+        margin-bottom: 15px; }
+        .modal-register .formwrapper form button:hover {
+          background: #363f4d; }
+
+.item {
+  height: 650px;
+  overflow: hidden; }
+  .item img {
+    width: 100%; }
+
+.slider {
+  position: relative; }
+  .slider .owl-nav {
+    position: absolute;
+    justify-content: space-between;
+    width: 98%;
+    left: 1%;
+    top: 45%;
+    display: none; }
+    .slider .owl-nav i {
+      padding: 16px 18px;
+      border-radius: 50%;
+      background: white;
+      transition: all 0.25s ease-in; }
+      .slider .owl-nav i:hover {
+        background: #c6263d;
+        color: white; }
+  .slider:hover .owl-nav {
+    animation: fadeup 1s forwards;
+    display: flex; }
+  .slider .owl-dots {
+    position: absolute;
+    left: 45%;
+    bottom: 10px; }
+    .slider .owl-dots button.owl-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: white;
+      margin-right: 8px;
+      transition: all 0.5s; }
+      .slider .owl-dots button.owl-dot.active {
+        width: 30px;
+        border-radius: 15px;
+        background: #c6263d; }
+
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.part1 {
+  margin: 50px 0px; }
+
+.product {
+  position: relative;
+  width: 22%; }
+  .product img {
+    width: 100%; }
+    .product img.first:hover {
+      opacity: 0; }
+    .product img.second {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1; }
+  .product .info {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%; }
+    .product .info .buy {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      padding-top: 20px;
+      display: none; }
+      .product .info .buy .color {
+        margin-bottom: 10px; }
+        .product .info .buy .color .black, .product .info .buy .color .red {
+          width: 15px;
+          height: 15px;
+          border-radius: 58%;
+          margin-right: 10px;
+          transition: all 0.5s; }
+          .product .info .buy .color .black:hover, .product .info .buy .color .red:hover {
+            cursor: pointer;
+            border: 1px solid white; }
+        .product .info .buy .color .red {
+          background: red; }
+        .product .info .buy .color .black {
+          background: black; }
+      .product .info .buy .size p {
+        margin: 0 15px 10px 0;
+        transition: all 0.5s; }
+        .product .info .buy .size p:hover {
+          cursor: pointer;
+          color: #c6263d;
+          font-weight: bold; }
+      .product .info .buy .choose {
+        border-radius: 2px;
+        width: 100%;
+        background: #c6263d;
+        text-align: center;
+        transition: all 0.5s; }
+        .product .info .buy .choose a {
+          padding: 10px;
+          color: white;
+          font-size: 12px;
+          font-weight: bold; }
+        .product .info .buy .choose:hover {
+          background: rgba(198, 38, 61, 0.8); }
+    .product .info p {
+      margin-top: 10px; }
+    .product .info:hover .buy {
+      animation: fadeupup 1s forwards;
+      display: flex; }
+
+.up {
+  right: 10px;
+  bottom: 30px; }
+  .up i {
+    padding: 13px;
+    background: #eee;
+    border-radius: 50%;
+    transition: all 0.5s; }
+    .up i:hover {
+      background: #c6263d;
+      color: white; }
+
+.appear {
+  position: fixed; }
+
+.last {
+  background: rgba(238, 238, 238, 0.2); }
+  .last .container {
+    padding: 10px 0; }
+  .last h4 {
+    margin-bottom: 5px;
+    text-align: center;
+    color: #c6263d;
+    font-size: 16px; }
+  .last p {
+    font-weight: 600; }
+    .last p span {
+      margin-left: 10px;
+      font-weight: 500; }
+  .last ul {
+    border-top: 0.5px solid rgba(128, 128, 128, 0.4);
+    padding-top: 10px;
+    justify-content: space-between; }
